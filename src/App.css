@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+header{
+  display: flex;
+  width: 100%;
+  padding: 0 10%;
+  height: 88px;
+  background-color: #F8F9FA;
+  align-items: center;
+  box-shadow: 0px 4px 32px -12px #00000040;
+}
+h1{
+  margin: 0;
+  color: #FD377E;
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+.cinza{
+color: #212529;
+}
+.main{
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  flex-flow: row;
+}
+.divisao_1{
+  width: 363px;
+  height: 351px;
+  left: 258px;
+  top: 127px;
+}
+ul{
+  margin-top: 39px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 450px){
+  .main{
+    flex-flow: column wrap;
+  }
+  ul{
+    margin-top: 60px;
+    height: 150px;
+    gap: 15px;
+    padding: 0px;
+    overflow-x: scroll;
+  }
+}
