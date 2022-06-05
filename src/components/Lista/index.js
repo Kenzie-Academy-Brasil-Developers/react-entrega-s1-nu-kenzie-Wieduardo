@@ -10,7 +10,7 @@ function Lista({listTransactions, setListTransactions}){
 
     return(
         <> 
-        {listTransactions !== [] ? listTransactions.map((transaction, index,) => <Card transaction={transaction} cardRemove={cardRemove} key={index}/>) : <h2>Você ainda não possui nenhum lançamento</h2>}       
+        {listTransactions.length != [] ? listTransactions.map((transaction, index,) => <Card transaction={transaction} cardRemove={cardRemove} key={index}/>) : <h2>Você ainda não possui nenhum lançamento</h2>}       
         </>
     )
 }

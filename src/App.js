@@ -18,8 +18,9 @@ function App() {
     <main className='main'>
       <div className='divisao_1'>
       <Form listTransactions={listTransactions} setListTransactions={setListTransactions}></Form>
-      {listTransactions !== [] ? <Total listTransactions={listTransactions}></Total> : ''}
+      {listTransactions.length >= 1 && <Total listTransactions={listTransactions}></Total>}
       </div>
+      {console.log(typeof(listTransactions),listTransactions)}
       <div className='divisao_2'>
         <ul>
           <Lista listTransactions={listTransactions} setListTransactions={setListTransactions}></Lista>
