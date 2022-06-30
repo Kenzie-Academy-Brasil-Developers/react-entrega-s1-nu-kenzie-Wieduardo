@@ -13,8 +13,8 @@ function Card({transaction, index, cardRemove}){
                     <h3>{transaction.description}</h3>
                     <span>{transaction.type}</span>
                 </div>
-                <span className='valor'>R$ {transaction.type === 'Entrada' ? '' : '-'}{transaction.value}</span>
-                <button className='buttonCard' onClick={() => cardRemove(transaction.description)}><FaTrash></FaTrash></button>
+                <span className='valor'>R$ {transaction.type === 'Entrada' ? '' : '-'}{transaction.value},00</span>
+                <button className='buttonCard' onClick={() => cardRemove(index)}><FaTrash></FaTrash></button>
             </div>
         </li>  
         </>

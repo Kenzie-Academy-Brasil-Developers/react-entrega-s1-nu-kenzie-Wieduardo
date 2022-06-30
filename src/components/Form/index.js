@@ -7,7 +7,6 @@ function Form({listTransactions, setListTransactions}){
     const [descricao, setDescricao]= useState('');
     const [tipo, setTipo]= useState('Entrada');
 
-
     function formInsere(){
 
         const obj= {description: descricao, type: tipo, value: parseFloat(valor) };
@@ -16,7 +15,14 @@ function Form({listTransactions, setListTransactions}){
         setListTransactions([...listTransactions, obj]);
     }
 
+    function checaValor(valor){
+        if (valor > -1){
+            setValor(valor)
+        } else {
+            return 0;
+        }
 
+    }
 
 
     return(
@@ -30,8 +36,8 @@ function Form({listTransactions, setListTransactions}){
             </div>
             <div className='metade'>
                 <span>Valor</span>
-                <input type="text" placeholder="R$" value={valor}
-                onChange={(event) => setValor(event.target.value)} required/>
+                <input type="number" placeholder="R$" value={valor}
+                onChange={(event) => checaValor(event.target.value)} required/>
             </div>
             <div className='metade'>
                 <span>Tipo de valor</span>
